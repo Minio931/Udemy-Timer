@@ -1,0 +1,47 @@
+.progres_bar {
+  width: 100%;
+  height: 100%;
+}
+
+.progress_bar__circle {
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 570;
+  stroke: #5624d0;
+  stroke-width: 15;
+  fill: none;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  transition: all 0.5s ease;
+}
+
+.progress_bar__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-weight: 700;
+  color: black;
+  padding: 0.1em 0em;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.progress_bar__text p:nth-child(1) {
+  font-size: 1.2rem;
+}
+.progress_bar__text p:nth-child(2) {
+  font-size: 1rem;
+}
+.timer {
+  position: relative;
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+  transform: rotate(90deg);
+}
+
+.title {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
