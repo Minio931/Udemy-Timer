@@ -15,6 +15,7 @@ const messageReactAppListener = async (message, sender, response) => {
       `[data-purpose*="section-panel-"]`
     );
 
+    let openSection;
     sections.forEach((section) => {
       if (
         section
@@ -25,6 +26,8 @@ const messageReactAppListener = async (message, sender, response) => {
           .querySelector(`[data-css-toggle-id*="accordion-panel"]`)
           .querySelector("button")
           .click();
+      } else {
+        openSection = section;
       }
     });
 
@@ -69,6 +72,20 @@ const messageReactAppListener = async (message, sender, response) => {
 
     let progressPrecentage = (timeCompleted / totalTime) * 100;
     response({ title, timeLeft, progressPrecentage });
+
+    sections.forEach((section) => {
+      section
+        .querySelector(`[data-css-toggle-id*="accordion-panel"]`)
+        .querySelector("button")
+        .click();
+    });
+
+    openSection
+      .querySelector(`[data-css-toggle-id*="accordion-panel"]`)
+      .querySelector("button")
+      .click();
+
+    openSection.scrollIntoView();
   }
 };
 

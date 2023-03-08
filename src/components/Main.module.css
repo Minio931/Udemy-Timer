@@ -35,6 +35,7 @@
 .timer {
   position: relative;
   margin: 0 auto;
+  margin-top: 1rem;
   width: 210px;
   height: 210px;
   transform: rotate(90deg);
